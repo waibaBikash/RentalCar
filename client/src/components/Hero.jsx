@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { assets, cityList } from '../assets/assets'
+import React, { useState } from 'react';
+import { assets, cityList } from '../assets/assets';
 
 const Hero = () => {
 
@@ -13,7 +13,9 @@ const Hero = () => {
            
             <div className='flex flex-col md:flex-row items-start md:items-center gap-10 min-md:ml-8'>
                 <div className='flex flex-col items-start gap-2'>
-                    <select required value={PickupLocation} onChange={(e) => setPickupLocation(e.target.value)}>
+                    <select 
+                      required value={PickupLocation}
+                      onChange={(e) => setPickupLocation(e.target.value)}>
                        <option value="">Pickup Location</option>
                        {cityList.map((city) => <option key={city} value={city}>{city}</option>)}
                     </select>
@@ -21,14 +23,20 @@ const Hero = () => {
                 </div>
                  <div className='flex flex-col items-start gap-2'>
                       <label htmlFor="pickup-date">Pick-up Date</label>
-                      <input type="date" id='pickup-date' min={new Date().toISOString().split('T')[0]} className='text-sm text-gray-500' required />
+                      <input type="date" id='pickup-date'
+                       min={new Date().toISOString().split('T')[0]} 
+                       className='text-sm text-gray-500' required />
                  </div>
                  <div className='flex flex-col items-start gap-2'>
                       <label htmlFor="return-date">Return Date</label>
-                      <input type="date" id='return-date' className='text-sm text-gray-500' required />
+                      <input type="date" id='return-date'
+                       className='text-sm text-gray-500'
+                       required
+                       />
                  </div>
             </div>
-            <button className='flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
+            <button
+             className='flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
                     <img src={assets.search_icon} alt="search" className='brightness-300' />
                     Search
                     </button>
@@ -39,4 +47,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
