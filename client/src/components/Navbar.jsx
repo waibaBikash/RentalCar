@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { assets, menuLinks } from '../assets/assets'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { assets, menuLinks } from '../assets/assets';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = ({setShowLogin}) => {
 
@@ -21,8 +21,12 @@ const Navbar = ({setShowLogin}) => {
           </Link>
          ))}
 
-         <div className='hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56'>
-            <input type="text" className='py-1.5 w-full bg-transparent outline-none placeholder-gray-500 ' placeholder='Search products' />
+         <div
+           className='hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56'>
+            <input 
+            type="text" 
+            className='py-1.5 w-full bg-transparent outline-none placeholder-gray-500 ' 
+            placeholder='Search products' />
             <img src={assets.search_icon} alt="" />
          </div>
 
@@ -39,4 +43,4 @@ const Navbar = ({setShowLogin}) => {
   )
 }
 
-export default Navbar
+export default Navbar;
