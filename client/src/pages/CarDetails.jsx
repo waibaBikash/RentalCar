@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { assets, dummyCarData } from '../assets/assets';
+import Loading from '../components/Loading';
 
 const CarDetails = () => {
 
@@ -10,7 +11,7 @@ const CarDetails = () => {
   
 
   useEffect(() => {
-  setCar(dummyCarData.indexOf(car => car._id === id));
+  setCar(dummyCarData.find(car => car._id === id));
   },[id]);
   return car ?  (
     <div className='px-6 md:px-16 lg:px-24 xl:px-32 mt-16'>
@@ -72,7 +73,7 @@ const CarDetails = () => {
        </div>
 
     </div>
-  ) : <p>Loading...</p>
+  ) : <Loading />
 }
 
 export default CarDetails
