@@ -23,7 +23,10 @@ const App = () => {
         <Route path="/my-bookings" element={<Mybookings />} />
        </Routes>
 
-       <Footer />
+{
+!isOwnerPath &&  <Footer /> 
+ }
+      
     </>
   )
 }
