@@ -8,7 +8,8 @@ const Footer = () => {
                 <div>
                     <img src={assets.logo} alt="logo" className='h-8 md:h-9' />
                     <p className='max-w-80 mt-3'>
-                        Premium car rental service offering a wide range of vehicles for all your travel needs. Experience luxury and comfort with our top-notch fleet.
+                     Premium car rental service offering a wide range of vehicles for
+                     all your travel needs. Experience luxury and comfort with our top-notch fleet.
                     </p>
                     <div className='flex items-center gap-3 mt-6'>
                         <a href="#"><img className='w-5 h-5' src={assets.facebook_logo} alt="" /></a>
@@ -63,4 +64,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;
