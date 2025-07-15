@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { assets, dummyCarData } from '../assets/assets';
 import Loading from '../components/Loading';
 
@@ -77,7 +77,8 @@ const CarDetails = () => {
             {/* Right: Booking Form */}
             <form onSubmit={handleSubmit} 
             className='shadow-lg h-max sticky top-18 rounded-xl p-6 space-y-6 text-gray-500'>
-                <p className='flex items-center justify-between text-2xl text-gray-800 font-semibold'>{currency}{car.pricePerDay}
+                <p className='flex items-center justify-between text-2xl text-gray-800 font-semibold'>
+                  {currency}{car.pricePerDay}
                    <span className='text-base text-gray-400 font-normal'>per day</span>
                    </p>
 
@@ -97,7 +98,9 @@ const CarDetails = () => {
                 </div>
 
                 <button 
-                className='w-full bg-primary hover:bg-primary-dull transition-all py-3 font-medium text-white rounded-xl cursor-pointer'>Book Now</button>
+                className='w-full bg-primary hover:bg-primary-dull transition-all py-3 font-medium text-white rounded-xl cursor-pointer'>
+                  Book Now
+                  </button>
 
                 <p 
                  className='text-center text-sm'>
