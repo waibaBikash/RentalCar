@@ -17,7 +17,7 @@ const Sidebar = () => {
         
         <div className='group relative'>
            <label htmlFor="image">
-             <img src={image ? URL.createObjectURL(image) : user ?.image || "https://unsplash.com/photos/a-white-car-parked-in-a-parking-lot-at-night-2u4Fa-htNU4"} alt="" />
+             <img className='h-9 md:h-14 w-9 md:w-14 rounded-full' src={image ? URL.createObjectURL(image) : user ?.image || "https://unsplash.com/photos/a-white-car-parked-in-a-parking-lot-at-night-2u4Fa-htNU4"} alt="" />
              <input onChange={e => setImage(e.target.files[0])} type="file" id='image' accept='image/*' hidden />
               <div className='absolute hidden top-0 right-0 left-0 bottom-0 bg-black/10 rounded-full group-hover:flex items-center justify-center cursor-pointer'>
                  <img src={assets.edit_icon} alt="" />
