@@ -1,5 +1,5 @@
 import React from 'react'
-import { assets } from '../assets/assets'
+import { assets } from '../assets/assets';
 
 const Banner = () => {
   return (
@@ -8,7 +8,9 @@ const Banner = () => {
         <div className='texyt-white'>
           <h2 className='text-3xl font-medium'>Do Your Own a Luxury Car</h2>
           <p className='mt-2'>Monetize your vechcle effortlaessly by listing it on CarRental.</p>
-          <p className='max-w-130'>We take care of insurance, driver verification and secure payements  - so you can earn passive income, stress-free.</p>
+          <p className='max-w-130'>We take care of insurance, driver verification and
+           secure payements  - so you can earn passive income, stress-free.
+           </p>
 
            <button 
             className='px-6 py-2 bg-white hover:bg-slate-100 transition-all text-primary rounded-lg text-sm mt-4 cursor-pointer'>
@@ -21,4 +23,4 @@ const Banner = () => {
   )
 }
 
-export default Banner
+export default Banner;
