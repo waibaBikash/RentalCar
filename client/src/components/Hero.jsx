@@ -3,7 +3,8 @@ import { assets, cityList } from '../assets/assets';
 
 const Hero = () => {
 
-  const [PickupLocation, setPickupLocation] = useState('');
+  const [PickupLocation, 
+    setPickupLocation] = useState('');
   return (
     <div 
      className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
@@ -42,11 +43,13 @@ const Hero = () => {
             </div>
             <button
              className='flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
-                    <img src={assets.search_icon} alt="search" className='brightness-300' />
+                    <img src={assets.search_icon} alt="search" 
+                    className='brightness-300' />
                     Search
                     </button>
         </form>
-           <img src={assets.main_car} alt="car" className='max-h-74'/>
+           <img src={assets.main_car} alt="car"
+            className='max-h-74'/>
        
     </div>
   )
