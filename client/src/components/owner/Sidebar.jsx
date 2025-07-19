@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { assets, dummyUserData, ownerMenuLinks } from '../../assets/assets'
+import React, { useState } from 'react';
+import { assets, dummyUserData, ownerMenuLinks } from '../../assets/assets';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -50,4 +50,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;
