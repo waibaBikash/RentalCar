@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { assets, dummyCarData } from '../../assets/assets'
-import Title from '../../components/owner/Title'
+import React, { useEffect, useState } from 'react';
+import { assets, dummyCarData } from '../../assets/assets';
+import Title from '../../components/owner/Title';
 
 const ManageCars = () => {
 
   const currency = import.meta.env.VITE_CURRENCY;
-  const [cars, setCars] = useState([])
+  const [cars, setCars] = useState([]);
 
   const fetchOwnerCars = async () => {
    setCars(dummyCarData)
@@ -17,7 +17,8 @@ const ManageCars = () => {
 
   return (
     <div className='px-4 pt-10 md:px-10 w-full'>
-      <Title title='Manage Cars' subTitle='View all listed cars, update their details, or remove them from the booking platform.' />
+      <Title title='Manage Cars' 
+      subTitle='View all listed cars, update their details, or remove them from the booking platform.' />
 
       <div className='max-w-3xl w-full rounded-md overflow-hidden border border-borderColor mt-6'>
           <table className='w-full border-collapse text-left text-sm text-gray-600'>
@@ -49,7 +50,8 @@ const ManageCars = () => {
                      {currency} {car.pricePerDay} / day
                     </td>
                     <td className='p-3 max-md:hidden'>
-                       <span className={`px-3 py-1 rounded-full text-xs ${car.isAvailable ? 'bg-green-100 text-green-500' : 'bg-red-100 text-red-500'}`}>
+                       <span 
+                       className={`px-3 py-1 rounded-full text-xs ${car.isAvailable ? 'bg-green-100 text-green-500' : 'bg-red-100 text-red-500'}`}>
                           {car.isAvailable ? "Abailable" : "Unavailable"}
                        </span>
                     </td>
@@ -68,4 +70,4 @@ const ManageCars = () => {
   )
 }
 
-export default ManageCars
+export default ManageCars;
