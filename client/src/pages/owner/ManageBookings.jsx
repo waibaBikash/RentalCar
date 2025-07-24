@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { dummyMyBookingsData } from '../../assets/assets';
 import Title from '../../components/owner/Title';
 
 const ManageBookings = () => {
 
   const currency = import.meta.env.VITE_CURRENCY;
-  const [bookings, setBookings] = useState([]);
+  const [bookings, 
+    setBookings] = useState([]);
 
   const fetchOwnerBookings = async () => {
     setBookings(dummyMyBookingsData);
