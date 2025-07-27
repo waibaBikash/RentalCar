@@ -17,3 +17,5 @@ const protect = async (req, res, next)=>{
     return res.json({success: false, message: "not authorization"})
   }
 }
+
+export default protect;
