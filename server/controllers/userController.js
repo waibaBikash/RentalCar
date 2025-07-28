@@ -56,7 +56,7 @@ export const loginUser = async(req, res)=>{
 
 export const getUserData = async (req, res) =>{
   try {
-    const {user} =req;
+    const {user} = req;
     res.json({success: true, user})
   } catch (error) {
     console.log(error.message)
