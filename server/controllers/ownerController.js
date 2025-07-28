@@ -1,5 +1,7 @@
 import { json } from "express";
 import User from "../models/User.js";
+import fs from 'fs'
+import imagekit from "../configs/imageKit.js";
 
 
 export const changeRoleToOwner = async (req, res)=>{
@@ -21,6 +23,15 @@ export const addCar = async (req, res)=>{
      const {_id} = req.user;
      let car = JSON.parse(req.body.carData);
      const imageFile = req.file;
+  // Upload Image to ImageKit
+     const fileBuffer = fs.readFileSync(imageFile.path);
+     const response = await imagekit.upload({
+       file: fileBuffer,
+       fileName: imageFile.originalname,
+       folder: '/cars'
+     })
+
+     
   } catch (error) {
     console.log(error.message);
     res.json({success: false, message: error.message})
