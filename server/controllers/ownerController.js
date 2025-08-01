@@ -87,3 +87,25 @@ if(car.owner.toString() !== _id.toString()){
     res.json({success: false, message: error.message})
   }
 }
+
+// Api to Delete a Car
+export const deleteCar = async(req, res)=>{
+  try {
+     const {_id} = req.user;
+     const {carId} = req.body;
+     const car = await Car.findById(carId)
+
+// Checking is car belongs to the user
+if(car.owner.toString() !== _id.toString()){
+  return res.json({success: false, message: "Unauthorized"});
+}
+ car.owner = null;
+ car.isAvailable = false;
+ await car.save()
+
+     res.json({success: true, message: "Car Removed"})
+  } catch (error) {
+    console.log(error.message)
+    res.json({success: false, message: error.message})
+  }
+}
