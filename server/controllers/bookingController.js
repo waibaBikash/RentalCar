@@ -40,3 +40,23 @@ export const checkAvailabilityOfCar = async ()=>{
     res.json({success: false, message: error.message})
    }
 }
+
+// API to Create Booking
+export const createBooking = async (req, res)=>{
+  try {
+    const {_id} = req.user;
+    const {car, pickupData, returnData} = req.body;
+
+    const isAvailable = await checkAvailability(car, pickupData, returnData)
+    if(!isAvailable){
+      return res.json({success: false, message: "Car is not available"})
+    }
+
+    const carData = await Car.findById(car)
+
+    
+  } catch (error) {
+    console.log(error.message);
+    res.json({success: false, message: error.message})
+  }
+}
