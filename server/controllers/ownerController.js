@@ -1,4 +1,4 @@
-import { tracingChannel } from "diagnostics_channel";
+
 import imagekit from "../configs/imageKit.js";
 import Booking from "../models/Booking.js";
 import Car from "../models/Car.js";
