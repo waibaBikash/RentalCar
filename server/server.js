@@ -4,6 +4,7 @@ import cors from 'cors'
 import connetDB from './configs/db.js';
 import userRouter from './routes/userRoutes.js';
 import ownerRouter from './routes/ownerRoutes.js';
+import bookingsRouter from './routes/bookingRoute.js';
 
 // Initialize Express App
 
@@ -20,6 +21,7 @@ app.get("/", (req, res)=> res.send("Server is running"))
 
 app.use('/api/user', userRouter)
 app.use('/api/owner', ownerRouter)
+app.use('/api/bookings', bookingsRouter)
 
 const PORT = process.env.PORT || 3000;
 
