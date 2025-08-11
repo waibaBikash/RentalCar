@@ -51,6 +51,18 @@ export const AppProvider =({ Children })=>{
     }
    }
 
+   // Function to log out the user
+   const logout = ()=>{
+    localStorage.removeItem('token')
+    setToken(null)
+    setUser(null)
+    setIsOwner(false)
+    axios.defaults.headers.common['Authorization'] = ''
+    toast.success('Your have been logged out')
+
+
+   }
+
    // Useeffect to retrieve the token from localStorage
 
    useEffect(()=>{
@@ -65,7 +77,7 @@ export const AppProvider =({ Children })=>{
 
     useEffect(()=>{
       if(token){
-         axios.defaults.headers.common[''] = `${token}`
+         axios.defaults.headers.common['Authorization'] = `${token}`
          fetchUser()
       }
     },[token])
