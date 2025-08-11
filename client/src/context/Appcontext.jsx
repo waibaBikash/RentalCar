@@ -39,14 +39,8 @@ export const AppProvider =({ Children })=>{
      toast.error(error.message)
    }
   }
-   // Useeffect to retrieve the token from localStorage
 
-   useEffect(()=>{
-    const token = localStorage.getItem('token')
-    setToken(token)
-   },[])
-
-   // Function to fetch all cars from the server
+  // Function to fetch all cars from the server
 
    const fetchCars = async ()=>{
     try {
@@ -56,6 +50,16 @@ export const AppProvider =({ Children })=>{
       toast.error(error.message)
     }
    }
+
+   // Useeffect to retrieve the token from localStorage
+
+   useEffect(()=>{
+    const token = localStorage.getItem('token')
+    setToken(token)
+    fetchCars()
+   },[])
+
+   
 
     // Useeffect to fetch user data when token is available
 
