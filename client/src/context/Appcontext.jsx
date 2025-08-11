@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import axios from 'axios';
 import {toast} from 'react-hot-toast'
 import { useNavigate } from "react-router-dom";
@@ -39,7 +39,12 @@ export const AppProvider =({ Children })=>{
      toast.error(error.message)
    }
   }
+   // Useeffect to retrieve the token from localStorage
 
+   useEffect(()=>{
+    const token = localStorage.getItem('token')
+    setToken(token)
+   },[])
   const value = {
      navigate, currency,
   }
