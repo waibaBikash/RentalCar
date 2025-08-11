@@ -85,9 +85,9 @@ export const AppProvider =({ Children })=>{
      navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate,
   }
 
-  return <AppContextProvider value={value}>
+  return <Appcontext.Provider value={value}>
      { Children }
-  </AppContextProvider>
+  </Appcontext.Provider>
 }
 
 export const useAppContext = ()=>{

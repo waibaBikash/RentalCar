@@ -4,12 +4,14 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
 import { AppProvider } from './context/Appcontext.jsx';
 
+
 createRoot(document.getElementById('root')).render(
   
     <BrowserRouter>
-      <AppProvider>
+       <AppProvider>
         <App />
-      </AppProvider>
+      
+       </AppProvider>
        
     </BrowserRouter>
   
