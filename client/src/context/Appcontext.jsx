@@ -45,6 +45,15 @@ export const AppProvider =({ Children })=>{
     const token = localStorage.getItem('token')
     setToken(token)
    },[])
+
+    // Useeffect to fetch user data when token is available
+
+    useEffect(()=>{
+      if(token){
+         axios.defaults.headers.common[''] = `${token}`
+         fetchUser()
+      }
+    },[token])
   const value = {
      navigate, currency,
   }
