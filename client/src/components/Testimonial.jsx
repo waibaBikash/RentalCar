@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from './Title'
+import Title from './Title';
 import { assets } from '../assets/assets';
 
 const Testimonial = () => {
@@ -46,7 +46,9 @@ const Testimonial = () => {
                                 <img key={index} src={assets.star_icon} alt="star-icon"/>
                             ))}
                         </div>
-                        <p className="text-gray-500 max-w-90 mt-4 font-light">"{testimonial.testimonial}"</p>
+                        <p
+                         className="text-gray-500 max-w-90 mt-4 font-light">"{testimonial.testimonial}"
+                         </p>
                     </div>
                 ))}
             </div>
@@ -54,4 +56,4 @@ const Testimonial = () => {
   )
 }
 
-export default Testimonial
+export default Testimonial;
