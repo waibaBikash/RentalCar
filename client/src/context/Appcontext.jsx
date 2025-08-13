@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from 'axios';
-import {toast} from 'react-hot-toast'
+import {toast} from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
 
 
@@ -82,7 +82,15 @@ export const AppProvider =({ Children })=>{
       }
     },[token])
   const value = {
-     navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate,
+     navigate, currency,
+      axios, user, setUser,
+       token, setToken, isOwner, 
+       setIsOwner, fetchUser,
+        showLogin, setShowLogin,
+         logout, fetchCars, cars,
+          setCars, pickupDate,
+           setPickupDate, returnDate, 
+           setReturnDate,
   }
 
   return <AppContext.Provider value={value}>
