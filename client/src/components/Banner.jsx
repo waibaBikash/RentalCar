@@ -17,7 +17,11 @@ const Banner = () => {
             List your car
             </button>
         </div>
-         <img src={assets.banner_car_image} alt="car" className='max-h-45 mt-10' />
+         <img 
+         src={assets.banner_car_image}
+         alt="car" 
+         className='max-h-45 mt-10'
+          />
 
     </div>
   )
